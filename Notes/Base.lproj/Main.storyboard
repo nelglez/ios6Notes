@@ -63,18 +63,18 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KeH-IY-gLF">
                                                     <rect key="frame" x="20" y="11" width="374" height="22"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIN-CI-pYU">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIN-CI-pYU">
                                                             <rect key="frame" x="0.0" y="0.0" width="326" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="326" id="lVO-2b-ndo"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGn-6p-dyv">
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGn-6p-dyv">
                                                             <rect key="frame" x="334" y="0.0" width="40" height="22"/>
                                                             <state key="normal" title="Share"/>
-                                                            <connections>
-                                                                <action selector="shareButtonPressed:" destination="rbh-up-ntD" eventType="touchUpInside" id="lFq-tt-sL0"/>
-                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -104,6 +104,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Quick Notes" id="upw-8d-lQn"/>
                     <connections>
+                        <outlet property="notesTextView" destination="87K-j2-Xgg" id="B3c-OO-6YM"/>
                         <outlet property="tableView" destination="5yU-NF-8Ub" id="V5W-Xn-k1y"/>
                     </connections>
                 </viewController>

@@ -10,6 +10,7 @@ import UIKit
 
 class NotesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var notesTextView: UITextView!
     
     let noteController = NoteController() //Manage the content
     
@@ -35,6 +36,18 @@ class NotesViewController: UIViewController {
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
         
+        //Get text if its present
+        //Create a new note
+        
+        //update the display
+        
+        guard let text = notesTextView.text, !text.isEmpty else { return }
+        
+        noteController.createNote(with: text)
+        
+        tableView.reloadData()
+        
+        notesTextView.text = nil
         
     }
     
@@ -59,8 +72,10 @@ extension NotesViewController: UITableViewDataSource {
         //Get the note for row
         let note = noteController.notes[indexPath.row]
         
-        //cell.note = note
+        //cell.note = note  // <- Or this way
+        
         noteCell.noteLabel.text = note.text
+        
         
         return cell
     }
