@@ -86,7 +86,7 @@ extension NotesViewController: UITableViewDataSource {
 extension NotesViewController: NoteTableViewCellDelegate {
     
     func shareNote(for cell: NoteTableViewCell) {
-       print("Share note: \(cell.note)")
+      // print("Share note: \(cell.note)")
         
         guard let note = cell.note else { return }
         
