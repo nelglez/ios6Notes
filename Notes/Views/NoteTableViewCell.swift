@@ -24,7 +24,8 @@ class NoteTableViewCell: UITableViewCell {
     }
 
     private func updateViews() {
-    
+        guard let note = note else { return }
+        noteLabel.text = note.text
     }
    
     @IBAction func shareButtonPressed(_ sender: UIButton) {

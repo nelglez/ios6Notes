@@ -23,15 +23,17 @@ class NotesViewController: UIViewController {
     }
     
 
-    /*
+   
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "NoteDetail" {
+            guard let destinationVC = segue.destination as? NoteDetailViewController, let cell = sender as? NoteTableViewCell else {return}
+            
+            destinationVC.note = cell.note
+            
+        }
     }
-    */
+   
     
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
@@ -72,10 +74,7 @@ extension NotesViewController: UITableViewDataSource {
         //Get the note for row
         let note = noteController.notes[indexPath.row]
         
-        //cell.note = note  // <- Or this way
-        
-        noteCell.noteLabel.text = note.text
-        
+        noteCell.note = note
         
         return cell
     }

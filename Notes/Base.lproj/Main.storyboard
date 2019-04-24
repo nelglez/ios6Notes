@@ -88,6 +88,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="noteLabel" destination="fIN-CI-pYU" id="w6E-HR-LqI"/>
+                                            <segue destination="QhS-nd-4QA" kind="show" identifier="NoteDetail" id="y4A-B6-Tq6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -111,6 +112,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="897.10144927536237" y="120.53571428571428"/>
+        </scene>
+        <!--Note Detail View Controller-->
+        <scene sceneID="MNi-CM-lgJ">
+            <objects>
+                <viewController id="QhS-nd-4QA" customClass="NoteDetailViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wki-bv-Gov">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Rn9-jp-nQC">
+                                <rect key="frame" x="20" y="160" width="374" height="201"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="201" id="M7S-pv-6R6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eZP-nN-Syh" firstAttribute="trailing" secondItem="Rn9-jp-nQC" secondAttribute="trailing" constant="20" id="5cf-oj-n6Y"/>
+                            <constraint firstItem="Rn9-jp-nQC" firstAttribute="top" secondItem="eZP-nN-Syh" secondAttribute="top" constant="20" id="K61-B2-qMe"/>
+                            <constraint firstItem="Rn9-jp-nQC" firstAttribute="leading" secondItem="eZP-nN-Syh" secondAttribute="leading" constant="20" id="Lqb-BD-og5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eZP-nN-Syh"/>
+                    </view>
+                    <connections>
+                        <outlet property="noteTextView" destination="Rn9-jp-nQC" id="c4h-Ck-nIA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QRI-LL-Qju" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1618.840579710145" y="124.55357142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="izk-pn-cjA">
