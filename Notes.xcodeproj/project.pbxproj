@@ -14,6 +14,7 @@
 		7AA948482270D20C00636348 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA948472270D20C00636348 /* NotesViewController.swift */; };
 		7AA9484A2270D89300636348 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA948492270D89300636348 /* Note.swift */; };
 		7AA9484D2270D8CA00636348 /* NoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA9484C2270D8CA00636348 /* NoteController.swift */; };
+		7AA948502270DA3000636348 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA9484F2270DA3000636348 /* NoteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7AA948472270D20C00636348 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		7AA948492270D89300636348 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		7AA9484C2270D8CA00636348 /* NoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteController.swift; sourceTree = "<group>"; };
+		7AA9484F2270DA3000636348 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				7AA948352270C17A00636348 /* AppDelegate.swift */,
-				7AA9484E2270D8CE00636348 /* Model Controller */,
 				7AA9484B2270D8A900636348 /* Model */,
-				7AA948472270D20C00636348 /* NotesViewController.swift */,
+				7AA9484E2270D8CE00636348 /* Model Controller */,
+				7AA948512270DA5C00636348 /* View Controllers */,
+				7AA948522270DA6F00636348 /* Views */,
 				7AA948392270C17A00636348 /* Main.storyboard */,
 				7AA9483C2270C17E00636348 /* Assets.xcassets */,
 				7AA9483E2270C17E00636348 /* LaunchScreen.storyboard */,
@@ -84,6 +87,22 @@
 				7AA9484C2270D8CA00636348 /* NoteController.swift */,
 			);
 			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		7AA948512270DA5C00636348 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7AA948472270D20C00636348 /* NotesViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7AA948522270DA6F00636348 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7AA9484F2270DA3000636348 /* NoteTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +179,7 @@
 				7AA948482270D20C00636348 /* NotesViewController.swift in Sources */,
 				7AA9484D2270D8CA00636348 /* NoteController.swift in Sources */,
 				7AA948362270C17A00636348 /* AppDelegate.swift in Sources */,
+				7AA948502270DA3000636348 /* NoteTableViewCell.swift in Sources */,
 				7AA9484A2270D89300636348 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
