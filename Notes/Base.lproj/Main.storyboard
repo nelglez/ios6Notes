@@ -75,6 +75,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGn-6p-dyv">
                                                             <rect key="frame" x="334" y="0.0" width="40" height="22"/>
                                                             <state key="normal" title="Share"/>
+                                                            <connections>
+                                                                <action selector="shareButtonPressed:" destination="rbh-up-ntD" eventType="touchUpInside" id="tHb-DQ-zzZ"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
