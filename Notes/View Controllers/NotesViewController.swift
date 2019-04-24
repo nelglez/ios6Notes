@@ -41,7 +41,7 @@ class NotesViewController: UIViewController {
 }
 
 extension NotesViewController: UITableViewDelegate {
-       
+    
 }
 
 extension NotesViewController: UITableViewDataSource {
@@ -52,13 +52,15 @@ extension NotesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath) as! NoteTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath)
+        
+        guard let noteCell = cell as? NoteTableViewCell else {return cell}
         
         //Get the note for row
         let note = noteController.notes[indexPath.row]
         
-        cell.note = note
-        
+        //cell.note = note
+        noteCell.noteLabel.text = note.text
         
         return cell
     }

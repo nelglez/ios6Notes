@@ -9,6 +9,14 @@
 import Foundation
 class NoteController {
     
+    //run on start
+    init() {
+        //create test data
+        
+        createNote(with: "Walk the dog")
+        createNote(with: "Eat lunch")
+    }
+    
     var notes: [Note] = [] //Array of notes
     
     func createNote(with text: String) {
