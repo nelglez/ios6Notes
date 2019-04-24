@@ -9,11 +9,15 @@
 import UIKit
 
 class NotesViewController: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+       tableView.delegate = self
+       tableView.dataSource = self
     }
     
 
@@ -26,5 +30,35 @@ class NotesViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
+        
+        
+    }
+    
 }
+
+extension NotesViewController: UITableViewDelegate {
+    
+    
+    
+    
+}
+
+extension NotesViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath)
+        
+        cell.backgroundColor = .yellow
+        
+        return cell
+    }
+   
+    
+}
+
